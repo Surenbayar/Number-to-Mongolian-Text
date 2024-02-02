@@ -16,8 +16,6 @@ def number_to_words_till_1000(num: int, is_money: bool = False):
         res = ' ' + names[digit_count][num % 10] + res
         num = num // 10
         digit_count = (digit_count + 1) % 3
-    if ' '.join(res.split()).endswith('зуун') and not is_money:
-        res = ' '.join(res.split())[0:-1]
     return ' '.join(res.split())
 
 
